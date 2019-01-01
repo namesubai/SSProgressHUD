@@ -1,8 +1,7 @@
 # SSProgressHUD
 加载动画提示、文字和图片提示、进度加载提示、可自定义
 
-<<<<<<< HEAD
-=======
+
 # 预览动画
 <img src="https://github.com/namesubai/SSProgressHUDDemo/blob/master/loadingGif.gif" width = 20% height = 20% />
 <img src="https://github.com/namesubai/SSProgressHUDDemo/blob/master/showTextGif.gif" width = 20% height = 20% />
@@ -110,7 +109,3 @@ SSProgressHUD *hud = [[SSProgressHUD alloc]initWithCustomView:customView]
 其他功能具体请看Demo的用法
 
 
-
-
-
->>>>>>> ad6204843504de22071c67f4573a4d6c8281e933
