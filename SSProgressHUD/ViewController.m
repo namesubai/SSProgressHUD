@@ -161,7 +161,7 @@
 
 - (void)showCustom{
     
-    UIView *customView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 90, 120)];
+    UIView *customView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 90, 200)];
     customView.backgroundColor = [UIColor redColor];
     
     SSProgressHUD *hud = [[SSProgressHUD alloc]initWithCustomView:customView];
