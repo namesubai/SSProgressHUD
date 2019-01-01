@@ -6,3 +6,28 @@
 <img src="https://github.com/namesubai/SSProgressHUDDemo/blob/master/showTextGif.gif" width = 20% height = 20% />
 <img src="https://github.com/namesubai/SSProgressHUDDemo/blob/master/showImage.gif" width = 20% height = 20% />
 <img src="https://github.com/namesubai/SSProgressHUDDemo/blob/master/progressGif.gif" width = 20% height = 20% />
+
+# 功能说明
+- loading动画加文字自适应
+- 文字提示，支持视图消失时回调
+- 图片加文字提示自适应，支持视图消失时回调
+- 进度加载，支持全部加载时回调
+- 可自定义customView
+- 多种属性设置，例如：颜色风格、遮罩类型、中心点偏移
+- 提供分类API调用
+
+# 具体使用
+
+### 例如Loading加文字
+
+```
+SSProgressHUD *hud = [[SSProgressHUD alloc]initWithMode:SSProgressHUDModeLoadingAndText];
+hud.customText = text;
+[hud showOnView:self.view animated:YES];
+```
+
+
+
+
+
+
