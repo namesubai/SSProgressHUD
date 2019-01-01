@@ -42,6 +42,69 @@ UIView *customView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 90, 200)];
 SSProgressHUD *hud = [[SSProgressHUD alloc]initWithCustomView:customView]
 ```
 
+### 快捷调用API
+```
+@interface NSObject (SSProgressHUD)
+
+/*
+ *tag参数的说明：
+ 1、当tag等于-1或者大于0的时候，每个tag对应一个hud。
+ 2、如果展示的是文字提示的tag为0,不会缓存hud。
+ 3、loading的时候默认tag为-1；
+ 
+ */
+
+
+///loading,没文字
+- (void)showLoading;
+- (void)showLoadingWithMaskType:(SSProgressHUDMaskType)maskType;
+
+- (void)showLoadingWithTag:(NSInteger)tag;
+- (void)showLoadingWithTag:(NSInteger)tag maskType:(SSProgressHUDMaskType)maskType;
+
+///loading,有文字
+- (void)showLoadingText:(NSString * _Nullable )text;
+- (void)showLoadingText:(NSString * _Nullable )text maskType:(SSProgressHUDMaskType)maskType;
+
+- (void)showLoadingText:(NSString * _Nullable )text tag:(NSInteger)tag;
+- (void)showLoadingText:(NSString * _Nullable )text tag:(NSInteger)tag maskType:(SSProgressHUDMaskType)maskType;
+
+///文字提示
+- (void)showText:(NSString *)text;
+///文字提示，有消失时回调
+- (void)showText:(NSString *)text finished:(void(^ __nullable)(void))finished;
+- (void)showText:(NSString *)text maskType:(SSProgressHUDMaskType)maskType finished:(void(^ __nullable)(void))finished;
+
+///进度条
+- (void)showProgress:(CGFloat)progress finished:(void(^ __nullable)(void))finished;
+- (void)showProgress:(CGFloat)progress maskType:(SSProgressHUDMaskType)maskType finished:(void(^ __nullable)(void))finished;
+
+- (void)showProgress:(CGFloat)progress text:(NSString * _Nullable)text finished:(void(^ __nullable)(void))finished;
+- (void)showProgress:(CGFloat)progress text:(NSString * _Nullable)text maskType:(SSProgressHUDMaskType)maskType finished:(void(^ __nullable)(void))finished;
+
+
+///图片
+- (void)showHUDWithImageName:(NSString *)imageName;
+- (void)showHUDWithImageName:(NSString *)imageName text:(NSString * _Nullable)text;
+- (void)showHUDWithImageName:(NSString *)imageName text:(NSString * _Nullable)text finished:(void(^__nullable)(void))finished;
+- (void)showHUDWithImageName:(NSString *)imageName text:(NSString * _Nullable)text maskType:(SSProgressHUDMaskType)maskType finished:(void(^__nullable)(void))finished;
+
+
+///隐藏
+- (void)hideHUD;
+- (void)hideHUDWithTag:(NSInteger)tag;
+
+- (void)hideHUDAnimated:(BOOL)animated;
+- (void)hideHUDAnimated:(BOOL)animated tag:(NSInteger)tag;
+
+- (void)hideHUDAnimated:(BOOL)animated finished:(void(^ __nullable)(void))finished;
+- (void)hideHUDAnimated:(BOOL)animated tag:(NSInteger)tag finished:(void(^ __nullable)(void))finished;
+
+@end
+```
+
+
+
 其他功能具体请看Demo的用法
 
 
