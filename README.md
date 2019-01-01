@@ -26,6 +26,23 @@ hud.customText = text;
 [hud showOnView:self.view animated:YES];
 ```
 
+### 通过中点偏移量自定义hud的位置
+```
+hud.viewCenterOffet = CGPointMake(0,-20);
+```
+
+### 设置自定义视图的内间距
+```
+hud.customViewEdgeInsets = UIEdgeInsetsMake(20,20,20,20);
+```
+
+### 自定义视图
+```
+UIView *customView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 90, 200)];
+SSProgressHUD *hud = [[SSProgressHUD alloc]initWithCustomView:customView]
+```
+
+其他功能具体请看Demo的用法
 
 
 
